@@ -1,4 +1,10 @@
 # MDKG
 There are all MDKG construction and application code
 
-## contextual features extraction
+## Data process
+
+## Contextual features extraction
+
+## NER&RE joint model training
+
+## Application
