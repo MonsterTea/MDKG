@@ -1,2 +1,4 @@
 # MDKG
-related data process code for MDKG construction and application
+There are all MDKG construction and application code
+
+## contextual features extraction
