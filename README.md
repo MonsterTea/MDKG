@@ -1,5 +1,5 @@
 # MDKG
-There are all MDKG construction and application code
+There are MDKG construction and application related code
 
 ## Data process
 
