@@ -7,31 +7,52 @@ This repository contains codes related to the MDKG (Medical Knowledge Graph) pro
 
 ### 1. NER & RE Model Training and Prediction Code + Active Learning Code
 
-In our `NER&RE_model` file, we provide a fine-tuned joint entity recognition and relationship extraction model based on the [Spert.PL](https://github.com/your-repo/spert.pl) framework, integrated with an active learning strategy based on [ACTUNE](https://github.com/your-repo/actune).
+The NER&RE_model directory contains a fine-tuned joint Named Entity Recognition (NER) and Relation Extraction (RE) model based on the [Spert.PL](https://github.com/your-repo/spert.pl) framework.
 
-For the training process, you can download the [CODER++](https://huggingface.co/GanjinZero/coder_eng_pp) embedding model.
+## Setup
 
-### 2. Extract Table Text from Full PDF/XML Files
+### 1. Download Pretrained Models
+- Download the [CODER++](https://huggingface.co/GanjinZero/coder_eng_pp) model or other BERT embedding models
+- Place the downloaded model in:  
+  `NER&RE_model/InputsAndOutputs/pretrained/`
 
-The `Contextual_features.py` script provides code for processing PDF/XML files, detecting tables, extracting text, and using ChatGPT to extract study population characteristics.
+### 2. Prepare Dataset
+- Download annotated datasets from:  
+  [Zenodo Repository](https://zenodo.org/records/10960357)
+- Place the data files in:  
+  `NER&RE_model/InputsAndOutputs/data/dataset/`
 
----
+## Usage
 
-### NER & RE Model Training and Prediction
+### Data Preprocessing
+   ​**Generate base input data**:
+   ```bash
+   python NER&RE_model/SynSpERT/generate_input.py
+  **Generate Augmented Data (optional)**：
+  ```bash
+  python NER&RE_model/SynSpERT/generate_augmented_input.py
 
-This section includes:
-- Training a joint entity recognition and relationship extraction model.
-- Integrating an active learning strategy to improve model performance iteratively.
 
-#### Steps:
-1. Download the CODER++ embedding model from [Hugging Face](https://huggingface.co/GanjinZero/coder_eng_pp).
-2. Train the model using the provided scripts in the `NER&RE_model` directory.
-3. Use the active learning code to iteratively improve the model by selecting the most informative samples for labeling.
+### Model Training
+   **Run the main training script**:
+   ```bash
+   python NER&RE_model/SynSpERT/main.py
 
-### Extract Table Text from PDF/XML Files
+### 2. `Active_learning.py` provides an active learning strategy based on [ACTUNE](https://github.com/your-repo/actune) for abstract selection.
 
-This section includes:
-- Processing PDF/XML files to detect tables.
-- Extracting text from detected tables.
-- Using ChatGPT to extract and verify study population characteristics.
+### 3. Extract Table Text from Full PDF Files
+
+- The `table_extraction.py` script extracts tables containing **baseline characteristics** from PDFs.
+- The `query_for_table_information_extraction.py` script extracts **study population characteristics**.
+
+### 3. Entity Linking
+
+- The `Entity_linking.py` script links entities to the following biomedical ontologies:
+  - **HPO** (Human Phenotype Ontology)
+  - **GO** (Gene Ontology)
+  - **UBERON** (Anatomical Ontology)
+  - **MONDO** (Disease Ontology)
+  - **UMLS** (Unified Medical Language System)
+
+
 
