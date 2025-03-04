@@ -11,29 +11,28 @@ The NER&RE_model directory contains a fine-tuned joint Named Entity Recognition 
 
 ## Setup
 
-### 1. Download Pretrained Models
+### a. Download Pretrained Models
 - Download the [CODER++](https://huggingface.co/GanjinZero/coder_eng_pp) model or other BERT embedding models
 - Place the downloaded model in:  
   `NER&RE_model/InputsAndOutputs/pretrained/`
 
-### 2. Prepare Dataset
+### b. Prepare Dataset
 - Download annotated datasets from:  
   [Zenodo Repository](https://zenodo.org/records/10960357)
 - Place the data files in:  
   `NER&RE_model/InputsAndOutputs/data/dataset/`
 
-## Usage
-
-### Data Preprocessing
+### c. Data Preprocessing
    ​**Generate base input data**:
    ```bash
    python NER&RE_model/SynSpERT/generate_input.py
+   ```
   **Generate Augmented Data (optional)**：
   ```bash
   python NER&RE_model/SynSpERT/generate_augmented_input.py
 
 
-### Model Training
+### d. Model Training
    **Run the main training script**:
    ```bash
    python NER&RE_model/SynSpERT/main.py
