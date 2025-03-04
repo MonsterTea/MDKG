@@ -12,18 +12,16 @@ train_file_path = r'your/train/file/path/md_train_KG_' + date + '.json'  # Set y
 test_file_path = r'your/test/file/path/md_test_KG_' + date + '.json'  # Set your test file path here
 all_file_path = r'your/all/file/path/md_KG_all_' + date + '.json'  # Set your all data file path here
 
-## 检查txt文件是否有“”
+
 def replace_quotes_in_files(directory):
-    # 遍历目录中的每个文件
     for filename in os.listdir(directory):
-        # 检查文件是否以.txt结尾
         if filename.endswith('.txt'):
             filepath = os.path.join(directory, filename)
 
             with open(filepath, 'r', encoding='utf8') as file:
                 lines = file.readlines()
 
-            # 替换"为'
+
             lines = [line.replace('"', "'") for line in lines]
 
             with open(filepath, 'w', encoding='utf8') as file:
