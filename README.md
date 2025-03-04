@@ -38,7 +38,8 @@ The NER&RE_model directory contains a fine-tuned joint Named Entity Recognition 
    python NER&RE_model/SynSpERT/main.py
    ```
 
-### 2. `Active_learning.py` provides an active learning strategy based on [ACTUNE](https://github.com/your-repo/actune) for abstract selection.
+### 2. Active Learning Strategy
+The `Active_learning.py` script implements an active learning strategy, leveraging [ACTUNE](https://github.com/your-repo/actune) to optimize the selection of relevant abstracts for model training. This approach enhances data efficiency by prioritizing the most informative samples.
 
 ### 3. Extract Table Text from Full PDF Files
 
