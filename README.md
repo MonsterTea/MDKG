@@ -24,18 +24,14 @@ The NER&RE_model directory contains a fine-tuned joint Named Entity Recognition 
 
 ### c. Data Preprocessing
    ​**Generate base input data**:
-   ```bash
-   python NER&RE_model/SynSpERT/generate_input.py
-   ```
+   'python NER&RE_model/SynSpERT/generate_input.py'
   **Generate Augmented Data (optional)**：
-  ```bash
-  python NER&RE_model/SynSpERT/generate_augmented_input.py
+  'python NER&RE_model/SynSpERT/generate_augmented_input.py'
 
 
 ### d. Model Training
    **Run the main training script**:
-   ```bash
-   python NER&RE_model/SynSpERT/main.py
+   'python NER&RE_model/SynSpERT/main.py'
 
 ### 2. `Active_learning.py` provides an active learning strategy based on [ACTUNE](https://github.com/your-repo/actune) for abstract selection.
 
