@@ -46,7 +46,7 @@ The `Active_learning.py` script implements an active learning strategy, leveragi
 - The `table_extraction.py` script extracts tables containing **baseline characteristics** from PDFs.
 - The `query_for_table_information_extraction.py` script extracts **study population characteristics**.
 
-### 3. Entity Linking
+### 4. Entity Linking
 
 - The `Entity_linking.py` script links entities to the following biomedical ontologies:
   - **HPO** (Human Phenotype Ontology)
@@ -54,6 +54,10 @@ The `Active_learning.py` script implements an active learning strategy, leveragi
   - **UBERON** (Anatomical Ontology)
   - **MONDO** (Disease Ontology)
   - **UMLS** (Unified Medical Language System)
+
+### 5. The Prompt for Triplets Refinement
+
+The 'Triplets_refine_prompt.py' script provides the prompt to refine the triplets extracted using Spert.pl with the help of a large language model (LLM).
 
 
 
