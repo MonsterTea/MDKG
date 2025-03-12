@@ -3,7 +3,7 @@
 
 ![gs0622B](https://github.com/user-attachments/assets/b4b94e2b-cf76-4751-a474-a5f9d9f32529)
 
-This repository contains codes related to the MDKG (Medical Knowledge Graph) project.
+This repository contains codes related to the MDKG (Mental Disorders Knowledge Graph) project.
 
 ### 1. NER & RE Model Training and Prediction Code + Active Learning Code
 
